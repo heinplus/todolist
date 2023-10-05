@@ -10,33 +10,32 @@
 </head>
 <body>
 
-    <div class="flex  justify-center items-center min-h-screen">
-        <div class="max-w-md bg-white rounded shadow p-4">
-            <h1 class="text-2xl font-semibold mb-4">To-Do List</h1>
-            
-            <!-- Task Input -->
-            <div class="flex mb-4">
-                <input
-                    type="text"
-                    id="taskInput"
-                    class="flex-grow border rounded-l py-2 px-3 w-96 mr-1"
-                    placeholder="Add a new task..."
-                />
-                <button id="addTaskBtn">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-                      </svg>
-                      
-                </button>
-
-            </div>
-    
-            <!-- Task List -->
-            <ul id="taskList" class="list-disc pl-6">
-                <!-- Task items will be added here dynamically -->
-            </ul>
+    <div class="min-h-screen flex flex-col justify-center items-center">
+        <div class="max-w-md w-full bg-white rounded shadow p-4">
+          <h1 class="text-2xl md:text-3xl lg:text-4xl font-semibold mb-4">To-Do List</h1>
+      
+          <!-- Task Input -->
+          <div class="flex flex-col md:flex-row mb-4">
+            <input
+              type="text"
+              id="taskInput"
+              class="md:flex-grow border rounded-l py-2 px-3 w-full md:w-96 mb-2 md:mb-0 md:mr-2"
+              placeholder="Add a new task..."
+            />
+            <button id="addTaskBtn" class="bg-blue-500 hover:bg-blue-600 text-white rounded py-2 px-4">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+              </svg>
+            </button>
+          </div>
+      
+          <!-- Task List -->
+          <ul id="taskList" class="list-disc pl-6">
+            <!-- Task items will be added here dynamically -->
+          </ul>
         </div>
-    </div>
+      </div>
+      
 
 
     <script src="./app.js"></script>
