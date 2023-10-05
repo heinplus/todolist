@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const addTaskBtn = document.getElementById("addTaskBtn");
   const taskList = document.getElementById("taskList");
 
-  // Function to add a new task
   function addTask(taskText) {
     const listItem = document.createElement("li");
     listItem.innerHTML = `
@@ -25,7 +24,6 @@ document.addEventListener("DOMContentLoaded", function () {
     `;
     taskList.appendChild(listItem);
 
-    // Add event listeners for the delete and complete buttons
     const deleteTaskBtn = listItem.querySelector(".deleteTaskBtn");
     deleteTaskBtn.addEventListener("click", function () {
       listItem.remove();
@@ -33,14 +31,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const completeTaskBtn = listItem.querySelector(".completeTaskBtn");
     completeTaskBtn.addEventListener("click", function () {
-      // Toggle the "completed" class on the <span> element
       listItem.querySelector("span").classList.toggle("completed-text");
     });
 
     taskInput.value = "";
   }
 
-  // Event listener for adding a task
   addTaskBtn.addEventListener("click", function () {
     const taskText = taskInput.value.trim();
     if (taskText) {
@@ -48,7 +44,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // You can also add the ability to press Enter to add a task
   taskInput.addEventListener("keyup", function (event) {
     if (event.key === "Enter") {
       const taskText = taskInput.value.trim();
